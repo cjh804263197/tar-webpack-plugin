@@ -1,0 +1,37 @@
+{
+    "name": "tar-webpack-plugin",
+    "version": "0.0.1",
+    "description": "webpack plugin to create an archive or extract an archive to disk",
+    "main": "./lib/index.js",
+    "types": "./lib/index.d.ts",
+    "scripts": {
+      "build": "tsc --declaration",
+      "prepublish": "npm run build"
+    },
+    "devDependencies": {
+      "@tsconfig/node14": "^1.0.0",
+      "@types/tar": "^4.0.4",
+      "import-sort-cli": "^6.0.0",
+      "import-sort-parser-typescript": "^6.0.0",
+      "import-sort-style-alias": "^1.2.0",
+      "typescript": "^4.2",
+      "webpack": "^5.37.1"
+    },
+    "dependencies": {
+      "tar": "^6.1.0"
+    },
+    "peerDependencies": {},
+    "license": "MIT",
+    "keywords": [
+      "typescript"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/cjh804263197/tar-webpack-plugin.git"
+    },
+    "homepage": "https://github.com/cjh804263197/tar-webpack-plugin",
+    "bugs": "https://github.com/cjh804263197/tar-webpack-plugin/issues",
+    "files": [
+        "lib/**/*"
+    ]
+  }

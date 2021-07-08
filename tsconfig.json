@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "preserveConstEnums": true,
+        "removeComments": true,
+        "outDir": "lib",
+        "noUnusedLocals": true,
+        "noUnusedParameters": true
+      },
+      "include": [
+        "src/**/*"
+      ]
+}
