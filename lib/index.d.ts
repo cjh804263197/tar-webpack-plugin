@@ -3,6 +3,7 @@ import * as tar from 'tar';
 interface BaseOptions {
     action: 'create' | 'extract' | 'c' | 'x';
     fileList?: string[];
+    delSource?: boolean;
 }
 declare type Options = (tar.CreateOptions | tar.ExtractOptions) & tar.FileOptions & BaseOptions;
 export default class TarWebpackPlugin {
