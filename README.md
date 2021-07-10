@@ -28,6 +28,7 @@ module.exports = {
 * `action` 
   * `'c' or 'create'` Create an archive
   * `'x' or 'extract'` Extract an archive to disk
+* `delSource` whether to delete the source file
 * `fileList` an array of paths
   * when `action='c' or 'create'`, The fileList is an array of paths to add to the tarball. Adding a directory also adds its children recursively.
   * when `action='x' or 'extract'`, The fileList is an array of paths to extract from the tarball. If no paths are provided, then all the entries are extracted.
