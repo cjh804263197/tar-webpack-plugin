@@ -1,7 +1,8 @@
 import { Compiler } from 'webpack'
-import * as tar from 'tar'
-import * as path from 'path';
-const rimraf = require('rimraf');
+import tar from 'tar'
+import path from 'path';
+import rimraf from 'rimraf';
+import chalk from 'chalk';
 
 interface BaseOptions 
 {
@@ -21,6 +22,7 @@ export default class TarWebpackPlugin {
   
     apply(compiler: Compiler) {
       compiler.hooks.afterEmit.tapPromise('TarWebpackPlugin', () => new Promise((resolve, reject) => {
+          console.log(chalk.blue('[TarWebpackPlugin] was start'))
           const { action, fileList, ...others } = this.options
           if (action === 'c' || action === 'create')
           {
@@ -43,7 +45,7 @@ export default class TarWebpackPlugin {
       }).then(_ =>
         {
           const { action, fileList, cwd, file, delSource } = this.options
-          if (!delSource) return
+          if (!delSource) return console.log(chalk.blue('[TarWebpackPlugin] was end'))
           if (action === 'c' || action === 'create')
           {
             if (Array.isArray(fileList))
@@ -60,6 +62,7 @@ export default class TarWebpackPlugin {
               rimraf.sync(filepath)
             }
           }
+          console.log(chalk.blue('[TarWebpackPlugin] was end'))
         }))
     }
   }

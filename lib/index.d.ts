@@ -1,5 +1,5 @@
 import { Compiler } from 'webpack';
-import * as tar from 'tar';
+import tar from 'tar';
 interface BaseOptions {
     action: 'create' | 'extract' | 'c' | 'x';
     fileList?: string[];

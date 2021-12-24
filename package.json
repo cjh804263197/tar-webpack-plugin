@@ -1,6 +1,6 @@
 {
   "name": "tar-webpack-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "webpack plugin to create an archive or extract an archive to disk",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@tsconfig/node14": "^1.0.0",
+    "@types/rimraf": "^3.0.2",
     "@types/tar": "^4.0.4",
     "import-sort-cli": "^6.0.0",
     "import-sort-parser-typescript": "^6.0.0",
@@ -19,7 +20,8 @@
   },
   "dependencies": {
     "rimraf": "^3.0.2",
-    "tar": "^6.1.0"
+    "tar": "^6.1.0",
+    "chalk": "^4.1.2"
   },
   "peerDependencies": {},
   "license": "MIT",
